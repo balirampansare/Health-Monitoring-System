@@ -9,3 +9,21 @@
 <p  align="justify">
 Health Monitoring System will record the patient’s heart beat rate and body temperature and the data is send to Thingspeak channel. With the help of MATLAB analysis and TimeControl email is send after every 5 min mentioning the BPM condition of the patient.
 </p>
+
+---
+
+### **HARDWARE & SOFTWARE REQUIREMENTS** ###
+
+Hardware                     | Software
+---------------------------- | -------------
+Node MCU & Power Cable       | Arduino Software IDE
+Pulse rate sensor            | Thingspeak 
+DHT11 Temperature Sensor     | MATLAB Analysis
+420 ohm resistor             | TimeControl
+Jumper wires                 |
+Breadboard                   |
+LED                          |
+Buzzer                       |
+
+---
+### **BLOCK DIAGRAM** ###

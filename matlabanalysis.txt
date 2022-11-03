@@ -1,3 +1,4 @@
+%NOTE: write your channel id and alert api key check code line no. 4,7.%
 
 % Store the channel ID for the Patient Monitoring channel.
 channelID = write_your_channel_id_here;

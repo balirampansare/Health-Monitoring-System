@@ -8,8 +8,8 @@
 
 DHT dht;
 
-const char* ssid = "bali";   // Your Network SSID
-const char* password = "bali301dada";       // Your Network Password
+const char* ssid = "Wifinam";   // Your Network SSID
+const char* password = "wifi_password";       // Your Network Password
 
 const int PulseWire = A0;
 const int LED2 = 2;
@@ -20,8 +20,8 @@ int Threshold = 550;
 
 WiFiClient client;
 
-unsigned long myChannelNumber = 1880412; //Your Channel Number (Without Brackets)
-const char * myWriteAPIKey = "ZRJJB5ZFAHALY193"; //Your Write API Key
+unsigned long myChannelNumber = 1780412; //Your Channel Number (Without Brackets)
+const char * myWriteAPIKey = "ZRWEF5ZFAHALY193"; //Your Write API Key
 
 PulseSensorPlayground pulseSensor;
 

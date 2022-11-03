@@ -64,5 +64,9 @@ Buzzer                       |
 **Arduino IDE File**
 1. [Code file](https://github.com/balirampansare/Health-Monitoring-System/blob/main/patientmonitoring.ino)
 
-2. ![MATLAB Analysis](/images/matlabanalysis.PNG)
+2. Matlab analysis and time control is in thingspeak 
+![MATLAB Analysis](/images/matlabanalysis.PNG)
+    [MATLAB Code](https://github.com/balirampansare/Health-Monitoring-System/blob/main/matlabanalysis.txt)
 
+3. OUTPUT
+    ![output](/images/output.PNG)

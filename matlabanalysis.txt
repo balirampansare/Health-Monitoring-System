@@ -1,0 +1,44 @@
+
+% Store the channel ID for the Patient Monitoring channel.
+channelID = write_your_channel_id_here;
+
+% Providing the ThingSpeak alerts API key.  
+alertApiKey = 'write_your_alert_apikey_here'; 
+
+% Set the address for the HTTTP call
+alertUrl="https://api.thingspeak.com/alerts/send";
+
+options = weboptions("HeaderFields", ["ThingSpeak-Alerts-API-Key", alertApiKey ]);
+
+% Set the email subject.
+alertSubject = sprintf("Patient Condition");
+
+% Read the recent data.
+moistureData = thingSpeakRead(channelID,'NumMinutes',30,'Fields',2);
+
+% Check to make sure the data was read correctly from the channel.
+if isempty(moistureData)
+    alertBody = ' No data read from patient. ';      
+else
+    maxthreshold = 100;
+    minthreshold = 60;
+
+    % Get the most recent point in the array of moisture data.
+    lastValue = moistureData(end); 
+
+    % Set the outgoing message
+    if (lastValue<=minthreshold)
+        alertBody = 'Patient BPM is below min threshold!!';
+    elseif (lastValue >= minthreshold || lastValue <= maxthreshold)
+        alertBody = 'Patient BPM is in normal condition';
+    else (lastValue>= maxthreshold)
+        alertBody = 'Patient BPM is above max threshold!!';
+    end
+end
+ 
+ % Catch errors so the MATLAB code does not disable a TimeControl if it fails
+try
+    webwrite(alertUrl , "body", alertBody, "subject", alertSubject, options);
+catch someException
+    fprintf("Failed to send alert: %s\n", someException.message);
+end

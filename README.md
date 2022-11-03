@@ -48,9 +48,21 @@ Buzzer                       |
 
 - ve pin of  LED & Buzzer -> GND
 
-
+---
 ### **Working** ###
 
 1. Setting up all the connections code uploading / Configuring Thingspeak channel
 2. Pulse rate and temperature sensor will continously monitor the patients pulse rate and temperature
+3. The monitored vlaues will be sent to thingspeak , where it will continously analysed
+4. MATLAB analysis will analysed the channel reading, for sending email as alert
+5. Timecontrol will send email after every 5 minutes in collaboration with MATLAB analysis
+6. LED will glow and buzzer will buzz if the Pulse rate goes below/above threshold value
+---
+### **CODE** ###
+
+
+**Arduino IDE File**
+1. [Code file](https://github.com/balirampansare/Health-Monitoring-System/blob/main/patientmonitoring.ino)
+
+2. ![MATLAB Analysis](/images/matlabanalysis.PNG)
 

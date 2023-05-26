@@ -7,7 +7,7 @@
 </p>
 
 <p  align="justify">
-Health Monitoring System will record the patient’s heart beat rate and body temperature and the data is send to Thingspeak channel. With the help of MATLAB analysis and TimeControl email is send after every 5 min, mentioning the BPM condition of the patient. If the BPM of the patient goes below or abobe certain threshold then LED glows and buzzer also start to buzz.
+Health Monitoring System will record the patient’s pulse rate and body temperature and the data is send to Thingspeak channel. With the help of MATLAB analysis and TimeControl email is send after every 5 min, mentioning the BPM condition of the patient. If the BPM of the patient goes below or abobe certain threshold then LED glows and buzzer also start to buzz.
 </p>
 
 ---
